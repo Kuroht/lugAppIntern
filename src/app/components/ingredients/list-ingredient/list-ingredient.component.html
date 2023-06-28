@@ -1,0 +1,54 @@
+<h2>Ingredients</h2>
+
+<div *ngIf="isMobile else notMobile">
+  <!-- Table for mobile -->
+  <table *ngIf="isMobile" class="mobile-table">
+    <!-- Table body -->
+    <tbody>
+      <tr *ngFor="let ingredient of ingredientsArr" (click)="viewItem(ingredient)">
+        <td>
+          <div class="ingredient-info">
+            <span class="label">Number:</span>
+            <span class="value">{{ ingredient.number }}</span>
+          </div>
+          <div class="ingredient-info">
+            <span class="label">Name:</span>
+            <span class="value">{{ ingredient.name }}</span>
+          </div>
+          <div class="ingredient-info">
+            <span class="label">Type:</span>
+            <span class="value">{{ ingredient.type }}</span>
+          </div>
+          <div class="ingredient-info">
+            <span class="label">Price:</span>
+            <span class="value">{{ ingredient.price }}</span>
+          </div>
+        </td>
+          <button (click)="delete(ingredient)">Delete</button>
+          <button (click)="edit(ingredient)">Change</button>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #notMobile>
+  <ul class="table">
+      <li>
+        <span>Number</span>
+        <span>Name</span>
+        <span>Type</span>
+        <span>Price</span>
+        <span>Option</span>
+      </li>
+      <li *ngFor="let ingredient of ingredientsArr" (click)="viewItem(ingredient)">
+          <span>{{ ingredient.number }}</span>
+          <span>{{ ingredient.name }}</span>
+          <span>{{ ingredient.type }}</span>
+          <span>{{ ingredient.price }}</span>
+          <span>
+            <button (click)="delete(ingredient)">Delete</button>
+            <button (click)="edit(ingredient)">Change</button>
+          </span>
+      </li>
+  </ul>
+</ng-template>
+  

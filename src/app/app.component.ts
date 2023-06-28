@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lugAppIntern';
+  logged = true;
+
+
+  changedLoggedState() {
+    this.logged = true;
+    console.log("Logged", this.logged);
+  }
 }

@@ -1,0 +1,15 @@
+<div *ngIf="itemView && !edit">
+  <h3>Item Details</h3>
+  <p>Number: {{ itemView.number }}</p>
+  <p>Name: {{ itemView.name }}</p>
+  <p>Type: {{ itemView.type }}</p>
+  <p>Price: {{ itemView.price }}€</p>
+  <button type="button" (click)="changeToEdit()">Edit</button>
+</div>
+<div *ngIf="edit">
+  <app-ingredient-form [editView]="edit" [ingredient]="itemView"></app-ingredient-form>
+</div>
+
+<div *ngIf="!itemView">
+  <p>Item not found.</p>
+</div>

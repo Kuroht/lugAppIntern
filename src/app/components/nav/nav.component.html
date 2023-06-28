@@ -1,0 +1,29 @@
+<!-- navigation.component.html -->
+
+<nav>
+  <div class="hamburger" (click)="toggleMenu()">
+    <div class="hamburger-icon"></div>
+    <div class="hamburger-icon"></div>
+    <div class="hamburger-icon"></div>
+  </div>
+  <div class="nav-links" [ngClass]="{'nav-active': isMenuOpen}">
+    <a routerLink="/">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Products</button>
+      <div class="dropdown-content">
+        <a routerLink="/product/list">List</a>
+        <a routerLink="/product/new">Create</a>
+        <a routerLink="/product/edit">Edit</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Ingredients</button>
+      <div class="dropdown-content">
+        <a routerLink="/ingredient/list">List</a>
+        <a routerLink="/ingredient/new">Create</a>
+        <a routerLink="/ingredient/edit">Edit</a>
+      </div>
+    </div>
+    <button class="close-button" (click)="toggleMenu()">X</button>
+  </div>
+</nav>

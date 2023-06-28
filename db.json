@@ -1,0 +1,30 @@
+{
+  "ingredients" : [
+      {
+          "id": 1,
+          "number": 1,
+          "name": "Cogumelos",
+          "price": 1,
+          "type": "fruitsVegetables"
+        }, {
+          "id": 2,
+          "number": 2,
+          "name": "Fiambre",
+          "price": 1.5,
+          "type": "meats"
+        }, {
+          "id": 3,
+          "number": 3,
+          "name": "Chouriço",
+          "price": 1.5,
+          "type": "meats"
+        }, {
+          "id": 4,
+          "number": 4,
+          "name": "Bacon",
+          "price": 2,
+          "type": "meats"
+        }
+  ],
+  "products" : []
+}
